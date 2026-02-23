@@ -67,7 +67,7 @@ The database is automatically initialized with migrations and seed data on first
 
 1. **Clone and navigate to the project:**
    ```bash
-   git clone <repository-url>
+   git clone git@github.com:davidhailu0/finance-tracker.git
    cd personal-finance-tracker
    ```
 
@@ -409,82 +409,4 @@ run-all-tests.bat
 ./run-all-tests.sh
 ```
 
-### Backend Tests - Database Requirement
 
-⚠️ **Important**: Backend tests require a MySQL database connection. 
-
-**Options:**
-1. **Use Docker MySQL** (Recommended):
-   ```bash
-   docker-compose up -d db
-   cd backend && pnpm test
-   ```
-
-2. **Use Local MySQL**:
-   - Install MySQL locally
-   - Create test database: `CREATE DATABASE finance_tracker_test;`
-   - Run tests: `cd backend && pnpm test`
-
-3. **Skip integration tests**:
-   ```bash
-   cd backend && pnpm test:unit
-   ```
-
-See [backend/TESTING_NOTE.md](./backend/TESTING_NOTE.md) for detailed information.
-
-### Test Coverage
-- **Backend**: ~60% coverage (core services, middleware, API endpoints)
-- **Frontend**: ~40% coverage (components, utilities)
-- **Total**: 12 test suites, ~94 test cases
-
-### Testing Documentation
-- [TESTING_GUIDE.md](./TESTING_GUIDE.md) - Comprehensive testing guide
-- [TEST_QUICK_START.md](./TEST_QUICK_START.md) - Quick reference
-- [TESTING_SUMMARY.md](./TESTING_SUMMARY.md) - Implementation summary
-- [backend/TESTING_NOTE.md](./backend/TESTING_NOTE.md) - Backend testing requirements
-
-## 📚 Documentation
-
-**📖 [DOCUMENTATION_INDEX.md](./DOCUMENTATION_INDEX.md) - Complete documentation index and navigation guide**
-
-### Getting Started
-- [QUICK_START_GUIDE.md](./QUICK_START_GUIDE.md) - ⚡ Get running in 5 minutes
-- [README.md](./README.md) - Complete project documentation (this file)
-
-### Project Status
-- [PROJECT_STATUS.md](./PROJECT_STATUS.md) - Current status and completed tasks
-- [TESTING_STATUS.md](./TESTING_STATUS.md) - Testing setup and results
-
-### Features & Implementation
-- [I18N_REFERENCE.md](./I18N_REFERENCE.md) - Multi-language support guide
-- [ENHANCED_FEATURES.md](./frontend/ENHANCED_FEATURES.md) - Enhanced features guide
-- [ARCHITECTURE.md](./frontend/ARCHITECTURE.md) - Frontend architecture guide
-
-### Setup & Deployment
-- [DATABASE_SETUP.md](./DATABASE_SETUP.md) - Database migrations and seeding guide
-- [DOCKER_SETUP.md](./DOCKER_SETUP.md) - Detailed Docker setup guide
-- [DOCKER_QUICK_REFERENCE.md](./DOCKER_QUICK_REFERENCE.md) - Docker commands reference
-
-### Development
-- [TESTING_GUIDE.md](./TESTING_GUIDE.md) - Comprehensive testing guide
-- [SWAGGER_SETUP.md](./backend/SWAGGER_SETUP.md) - API documentation setup
-- [CODE_STRUCTURE_ANALYSIS.md](./CODE_STRUCTURE_ANALYSIS.md) - Code structure analysis
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License.
-
-## 🙏 Acknowledgments
-
-- [Next.js](https://nextjs.org/) - React framework
-- [shadcn/ui](https://ui.shadcn.com/) - UI components
-- [Framer Motion](https://www.framer.com/motion/) - Animations
-- [Recharts](https://recharts.org/) - Charts library
