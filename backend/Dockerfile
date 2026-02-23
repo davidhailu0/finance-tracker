@@ -29,6 +29,8 @@ COPY --from=builder /app/src/config/config.js ./src/config/config.js
 
 # Only copy what's needed to run the app
 COPY --from=builder /app/dist ./dist
+# Copy config.js to dist folder for runtime imports
+COPY --from=builder /app/src/config/config.js ./dist/config/config.js
 COPY --from=builder /app/package.json ./package.json
 COPY --from=builder /app/node_modules ./node_modules
 
