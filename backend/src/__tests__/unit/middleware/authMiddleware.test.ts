@@ -41,7 +41,7 @@ describe('AuthMiddleware', () => {
     const token = jwt.sign(
       { userId: testUser.id, email: testUser.email },
       jwtConfig.secret as string,
-      { expiresIn: jwtConfig.expiresIn as string }
+      { expiresIn: jwtConfig.expiresIn as string | number }
     );
 
     mockReq.headers = {
@@ -97,7 +97,7 @@ describe('AuthMiddleware', () => {
     const token = jwt.sign(
       { userId: testUser.id, email: testUser.email },
       jwtConfig.secret as string,
-      { expiresIn: '-1s' } // Already expired
+      { expiresIn: -1 } // Already expired
     );
 
     mockReq.headers = {
@@ -117,7 +117,7 @@ describe('AuthMiddleware', () => {
     const token = jwt.sign(
       { userId: 99999, email: 'nonexistent@example.com' },
       jwtConfig.secret as string,
-      { expiresIn: jwtConfig.expiresIn as string }
+      { expiresIn: jwtConfig.expiresIn as string | number }
     );
 
     mockReq.headers = {
@@ -137,7 +137,7 @@ describe('AuthMiddleware', () => {
     const token = jwt.sign(
       { userId: testUser.id, email: testUser.email },
       jwtConfig.secret as string,
-      { expiresIn: jwtConfig.expiresIn as string }
+      { expiresIn: jwtConfig.expiresIn as string | number }
     );
 
     mockReq.headers = {
