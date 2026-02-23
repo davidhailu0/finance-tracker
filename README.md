@@ -8,7 +8,7 @@ The fastest way to get started is using Docker Compose. This will start all serv
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone git@github.com:davidhailu0/finance-tracker.git
 cd personal-finance-tracker
 
 # Start all services (frontend, backend, database)
